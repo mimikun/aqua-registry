@@ -1,0 +1,13 @@
+packages:
+  - type: github_release
+    repo_owner: mattn
+    repo_name: sleepy
+    asset: sleepy_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+    format: zip
+    description:
+    overrides:
+      - goos: linux
+        format: tar.gz
+    files:
+      - name: sleepy
+        src: sleepy_{{.Version}}_{{.OS}}_{{.Arch}}/sleepy
