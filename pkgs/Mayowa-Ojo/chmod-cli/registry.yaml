@@ -1,0 +1,20 @@
+packages:
+  - type: github_release
+    repo_owner: Mayowa-Ojo
+    repo_name: chmod-cli
+    description: Effortlessly generate chmod commands
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: "true"
+        asset: chmod-cli_{{trimV .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+        format: tar.gz
+        windows_arm_emulation: true
+        replacements:
+          amd64: x86_64
+          darwin: Darwin
+          linux: Linux
+          windows: Windows
+        checksum:
+          type: github_release
+          asset: checksums.txt
+          algorithm: sha256
