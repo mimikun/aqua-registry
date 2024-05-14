@@ -1,0 +1,5 @@
+packages:
+  - type: go_install
+    repo_owner: nao1215
+    repo_name: sqly
+    description: sqly - eaisly execute SQL against CSV/TSV/LTSV/JSON and Microsoft Excel with shell
