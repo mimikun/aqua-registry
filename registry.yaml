@@ -29697,6 +29697,27 @@ packages:
       asset: zek_checksums.txt
       algorithm: sha256
   - type: github_release
+    repo_owner: mikuta0407
+    repo_name: misskey-cli
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.1")
+        asset: misskey-cli_{{.OS}}_{{.Arch}}
+        format: raw
+        rosetta2: true
+        supported_envs:
+          - linux/amd64
+          - darwin
+      - version_constraint: "true"
+        asset: misskey-cli_{{.OS}}_{{.Arch}}
+        format: raw
+        rosetta2: true
+        windows_arm_emulation: true
+        supported_envs:
+          - darwin
+          - windows
+          - amd64
+  - type: github_release
     repo_owner: minamijoyo
     repo_name: hcledit
     asset: hcledit_{{trimV .Version}}_{{.OS}}_{{.Arch}}.tar.gz

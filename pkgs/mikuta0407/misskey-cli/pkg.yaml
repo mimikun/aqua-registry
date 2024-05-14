@@ -1,0 +1,4 @@
+packages:
+  - name: mikuta0407/misskey-cli@v0.3
+  - name: mikuta0407/misskey-cli
+    version: v0.1
