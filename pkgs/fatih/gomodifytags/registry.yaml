@@ -1,0 +1,5 @@
+packages:
+  - type: go_install
+    repo_owner: fatih
+    repo_name: gomodifytags
+    description: Go tool to modify struct field tags
