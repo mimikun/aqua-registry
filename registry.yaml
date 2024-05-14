@@ -18025,6 +18025,10 @@ packages:
       type: github_release
       asset: frp_sha256_checksums.txt
       algorithm: sha256
+  - type: go_install
+    repo_owner: fatih
+    repo_name: motion
+    description: Navigation and insight in Go
   - type: github_release
     repo_owner: fe3dback
     repo_name: go-arch-lint
