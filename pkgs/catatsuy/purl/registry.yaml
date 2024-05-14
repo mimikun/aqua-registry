@@ -1,0 +1,46 @@
+packages:
+  - type: github_release
+    repo_owner: catatsuy
+    repo_name: purl
+    description: Streamlining Text Processing
+    version_constraint: "false"
+    version_overrides:
+      - version_constraint: semver("<= 0.0.1")
+        asset: purl-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        files:
+          - name: purl
+            src: purl
+        checksum:
+          type: github_release
+          asset: purl_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: Version == "v0.0.2"
+        asset: purl-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        files:
+          - name: purl
+            src: purl
+        checksum:
+          type: github_release
+          asset: purl_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        supported_envs:
+          - linux
+          - darwin
+      - version_constraint: "true"
+        asset: purl-{{.OS}}-{{.Arch}}.{{.Format}}
+        format: tar.gz
+        files:
+          - name: purl
+            src: purl
+        checksum:
+          type: github_release
+          asset: purl_{{trimV .Version}}_checksums.txt
+          algorithm: sha256
+        supported_envs:
+          - linux
+          - darwin
