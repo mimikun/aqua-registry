@@ -1,0 +1,5 @@
+packages:
+  - type: go_install
+    repo_owner: kisielk
+    repo_name: errcheck
+    description: errcheck checks that you checked errors

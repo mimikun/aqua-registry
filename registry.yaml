@@ -25395,6 +25395,10 @@ packages:
     overrides:
       - goos: windows
         format: zip
+  - type: go_install
+    repo_owner: kisielk
+    repo_name: errcheck
+    description: errcheck checks that you checked errors
   - type: github_release
     repo_owner: kitabisa
     repo_name: teler
